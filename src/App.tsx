@@ -118,7 +118,7 @@ function StatsBar() {
   const stats = [
     { value: '$1M+', label: 'Revenue Generated For Clients' },
     { value: '500+', label: 'Ads Delivered' },
-    { value: 'Fast Delivery', label: 'As humanly possible' },
+       { value: '72 Hours', label: 'Fast Delivery' },
     { value: '4.8/5', label: 'Client Rating' },
   ];
   return (
