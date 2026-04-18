@@ -145,7 +145,7 @@ function Problem() {
         </h2>
         <p className="text-white text-lg mb-14 leading-relaxed max-w-2xl mx-auto">
           You&apos;re spending money on ads, testing audiences, tweaking budgets — but the real bottleneck?{' '}
-          <span className="text-white font-bold">The creative.</span> Generic AI content doesn&apos;t stop the scroll. Human-made content does.
+          <span className="text-white font-bold">The creative.</span> Generic AI content doesn&apos;t stop the scroll. Human-made content does!
         </p>
         <div className="grid md:grid-cols-3 gap-4 text-left">
           {[
