@@ -24,7 +24,7 @@ function Navbar() {
   return (
     <nav className="fixed top-0 left-0 w-full bg-black/90 backdrop-blur-md border-b border-white/5 z-50 px-6 py-4 flex items-center justify-between">
       <div className="flex items-center">
-        <img src={Logo} alt="HumanMadeAds" className="h-8 w-auto" />
+        <img src={Logo} alt="HumansMakeAds" className="h-8 w-auto" />
       </div>
       <div className="hidden md:flex items-center gap-8 text-sm font-medium text-white">
         <a href="#how" className="hover:text-white transition-colors">How It Works</a>
@@ -87,13 +87,13 @@ function Hero() {
 
         {/* Social icons */}
         <div className="flex items-center justify-center gap-4 mb-10">
-          <a href="https://www.instagram.com/humanmadeads" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border border-[#333] flex items-center justify-center text-white hover:border-[#f6be1d] hover:text-[#f6be1d] transition-colors">
+          <a href="https://www.instagram.com/HumansMakeAds" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border border-[#333] flex items-center justify-center text-white hover:border-[#f6be1d] hover:text-[#f6be1d] transition-colors">
             <Instagram size={18} />
           </a>
-          <a href="https://www.twitter.com/humanmadeads" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border border-[#333] flex items-center justify-center text-white hover:border-[#f6be1d] hover:text-[#f6be1d] transition-colors">
+          <a href="https://www.twitter.com/HumansMakeAds" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border border-[#333] flex items-center justify-center text-white hover:border-[#f6be1d] hover:text-[#f6be1d] transition-colors">
             <Twitter size={18} />
           </a>
-          <a href="https://www.tiktok.com/@humanmadeads" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border border-[#333] flex items-center justify-center text-white hover:border-[#f6be1d] hover:text-[#f6be1d] transition-colors">
+          <a href="https://www.tiktok.com/@HumansMakeAds" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border border-[#333] flex items-center justify-center text-white hover:border-[#f6be1d] hover:text-[#f6be1d] transition-colors">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z"/></svg>
           </a>
         </div>
@@ -163,7 +163,7 @@ function Problem() {
 
         {/* Video examples */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mt-14 max-w-5xl mx-auto">
-          {[...Array(8)].map((_, i) => (
+          {[...Array(4)].map((_, i) => (
             <div key={i} className="relative aspect-video overflow-hidden group cursor-pointer border border-[#222]">
               <img src={`https://picsum.photos/seed/inf${i}/400/225`} alt="Ad Example" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               <div className="absolute inset-0 bg-black/50 flex items-center justify-center group-hover:bg-black/70 transition-colors">
@@ -270,7 +270,7 @@ function Proof() {
     { key: 'ai',         label: 'AI Tools' },
     { key: 'freelancer', label: 'Freelancer' },
     { key: 'agency',     label: 'Big Agency' },
-    { key: 'us',         label: 'HumanMadeAds', highlight: true },
+    { key: 'us',         label: 'HumansMakeAds', highlight: true },
   ];
 
   return (
@@ -546,7 +546,7 @@ function Footer() {
       <div className="max-w-5xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-start gap-10 mb-12">
           <div>
-            <img src={Logo} alt="HumanMadeAds" className="h-8 w-auto mb-4" />
+            <img src={Logo} alt="HumansMakeAds" className="h-8 w-auto mb-4" />
             <p className="text-white text-sm max-w-xs leading-relaxed">
               Hand-crafted e-commerce video ads that actually convert. No AI. No excuses.
             </p>
@@ -562,19 +562,19 @@ function Footer() {
             </div>
             <div>
               <h4 className="text-white text-xs font-black uppercase tracking-widest mb-4">Contact</h4>
-              <a href="mailto:team@HumanMadeAds.com" className="text-sm text-white hover:text-[#f6be1d] transition-colors flex items-center gap-2">
-                <Mail size={14} /> team@HumanMadeAds.com
+              <a href="mailto:team@HumansMakeAds.com" className="text-sm text-white hover:text-[#f6be1d] transition-colors flex items-center gap-2">
+                <Mail size={14} /> team@HumansMakeAds.com
               </a>
               <div className="flex gap-3 mt-4">
                 {[
-                  { Icon: Instagram, href: 'https://www.instagram.com/humanmadeads' },
-                  { Icon: Twitter, href: 'https://www.twitter.com/humanmadeads' },
+                  { Icon: Instagram, href: 'https://www.instagram.com/HumansMakeAds' },
+                  { Icon: Twitter, href: 'https://www.twitter.com/HumansMakeAds' },
                 ].map(({ Icon, href }, i) => (
                   <a key={i} href={href} target="_blank" rel="noopener noreferrer" className="w-8 h-8 border border-[#222] flex items-center justify-center text-white hover:border-[#f6be1d] hover:text-[#f6be1d] transition-colors">
                     <Icon size={14} />
                   </a>
                 ))}
-                <a href="https://www.tiktok.com/@humanmadeads" target="_blank" rel="noopener noreferrer" className="w-8 h-8 border border-[#222] flex items-center justify-center text-white hover:border-[#f6be1d] hover:text-[#f6be1d] transition-colors">
+                <a href="https://www.tiktok.com/@HumansMakeAds" target="_blank" rel="noopener noreferrer" className="w-8 h-8 border border-[#222] flex items-center justify-center text-white hover:border-[#f6be1d] hover:text-[#f6be1d] transition-colors">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z"/></svg>
                 </a>
               </div>
@@ -582,7 +582,7 @@ function Footer() {
           </div>
         </div>
         <div className="border-t border-[#111] pt-6 text-xs text-white text-center leading-relaxed">
-          <p>&copy; 2026 HumanMadeAds. All Rights Reserved.</p>
+          <p>&copy; 2026 HumansMakeAds. All Rights Reserved.</p>
           <p className="mt-2 max-w-2xl mx-auto">Results mentioned are not typical and depend on your product, market, and effort. We do not guarantee specific outcomes. The information on this site is for informational purposes only.</p>
         </div>
       </div>
