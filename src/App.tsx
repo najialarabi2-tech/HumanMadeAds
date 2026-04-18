@@ -11,7 +11,6 @@ import {
   Mail,
   Instagram,
   Twitter,
-  Youtube,
   Check,
   ArrowRight,
   Shield,
@@ -66,17 +65,38 @@ function Hero() {
           Human-made creatives only
         </div>
 
-        <h1 className="text-5xl md:text-[5.5rem] font-black text-white leading-[1.05] mb-8 tracking-tight">
+        <h1 className="text-5xl md:text-[5.5rem] font-black text-white leading-[1.05] mb-10 tracking-tight">
           IS YOUR CONTENT THE THING{' '}
           <span className="text-[#f6be1d]">KILLING YOUR SALES?</span>
         </h1>
 
-        <p className="text-white text-xl md:text-2xl mb-4 max-w-2xl mx-auto leading-relaxed font-medium">
-          Stop relying on AI-generated content. we help you implement a repeatable marketing strategy designed to drive sales.
+        {/* Video placeholder */}
+        <div className="relative mx-auto mb-8 max-w-xl aspect-video bg-[#111] border border-[#333] flex items-center justify-center overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/40" />
+          <div className="flex flex-col items-center gap-3 z-10">
+            <div className="w-16 h-16 bg-[#f6be1d] flex items-center justify-center">
+              <Play size={24} fill="black" className="text-black ml-1" />
+            </div>
+            <span className="text-white/40 text-xs uppercase tracking-widest">Video coming soon</span>
+          </div>
+        </div>
+
+        <p className="text-white text-xl md:text-2xl mb-6 max-w-2xl mx-auto leading-relaxed font-medium">
+          Stop relying on AI-generated content. We help you implement a repeatable marketing strategy designed to drive sales.
         </p>
-        <p className="text-white text-base mb-12 max-w-xl mx-auto">
-        
-        </p>
+
+        {/* Social icons */}
+        <div className="flex items-center justify-center gap-4 mb-10">
+          <a href="https://www.instagram.com/humanmadeads" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border border-[#333] flex items-center justify-center text-white hover:border-[#f6be1d] hover:text-[#f6be1d] transition-colors">
+            <Instagram size={18} />
+          </a>
+          <a href="https://www.twitter.com/humanmadeads" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border border-[#333] flex items-center justify-center text-white hover:border-[#f6be1d] hover:text-[#f6be1d] transition-colors">
+            <Twitter size={18} />
+          </a>
+          <a href="https://www.tiktok.com/@humanmadeads" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border border-[#333] flex items-center justify-center text-white hover:border-[#f6be1d] hover:text-[#f6be1d] transition-colors">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z"/></svg>
+          </a>
+        </div>
 
         <a href="#pricing" className="bg-[#f6be1d] text-black px-12 py-5 text-lg font-black uppercase tracking-wide hover:bg-[#f6be1d]/80 transition-colors inline-block">
           BOOK A FREE CALL
@@ -260,7 +280,7 @@ function Proof() {
           <p className="text-[#f6be1d] text-xs font-black uppercase tracking-[0.2em] mb-6">Why Us</p>
           <h2 className="text-4xl md:text-5xl font-black text-white mb-4">We're The Obvious Choice.</h2>
           <p className="text-white text-lg">Stack us up against every alternative. The math is simple.</p>
-        </div>
+        </div>        git push -u origin main
 
         {/* Mobile: card stack */}
         <div className="md:hidden space-y-4">
@@ -546,11 +566,17 @@ function Footer() {
                 <Mail size={14} /> team@HumanMadeAds.com
               </a>
               <div className="flex gap-3 mt-4">
-                {[Instagram, Twitter, Youtube].map((Icon, i) => (
-                  <a key={i} href="#" className="w-8 h-8 border border-[#222] flex items-center justify-center text-white hover:border-[#f6be1d] hover:text-[#f6be1d] transition-colors">
+                {[
+                  { Icon: Instagram, href: 'https://www.instagram.com/humanmadeads' },
+                  { Icon: Twitter, href: 'https://www.twitter.com/humanmadeads' },
+                ].map(({ Icon, href }, i) => (
+                  <a key={i} href={href} target="_blank" rel="noopener noreferrer" className="w-8 h-8 border border-[#222] flex items-center justify-center text-white hover:border-[#f6be1d] hover:text-[#f6be1d] transition-colors">
                     <Icon size={14} />
                   </a>
                 ))}
+                <a href="https://www.tiktok.com/@humanmadeads" target="_blank" rel="noopener noreferrer" className="w-8 h-8 border border-[#222] flex items-center justify-center text-white hover:border-[#f6be1d] hover:text-[#f6be1d] transition-colors">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z"/></svg>
+                </a>
               </div>
             </div>
           </div>
