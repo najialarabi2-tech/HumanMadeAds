@@ -471,12 +471,11 @@ function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const faqs = [
+    { q: "Is this right for my business, personal brand, or coaching?", a: "If you're selling a physical product online (e-commerce, DTC, dropshipping), building a personal brand, or offering coaching services—and you need creatives that actually convert—this is built for you. We've worked across dozens of niches and business types." },
     { q: "What actually happens after I order?", a: "You pick your package, fill out a short brief (product link, offer, angles), and we get to work. You'll receive your finished creatives, platform-optimized, ready to launch." },
-    { q: "How is this different from hiring a freelancer?", a: "Freelancers take weeks, miss deadlines, and produce inconsistent quality. We have a systemized process that delivers polished, platform-optimized creatives — every single time." },
+    { q: "How is this different from hiring a freelancer?", a: "Freelancers take weeks, miss deadlines, and produce inconsistent quality. We have a systemized process that delivers polished, platform optimized creatives every single time based on your choices." },
     { q: "Will these actually convert?", a: "That's the only thing that matters to us. Every ad is built using proven direct-response frameworks. We study what's working right now on Meta and TikTok and apply it to your product." },
     { q: "What's the revision policy?", a: "Starter gets 1 round. Growth gets 2. Scale gets unlimited. We don't stop until you're satisfied." },
-    { q: "Is this right for my business?", a: "If you're selling a physical product online — e-commerce, DTC, dropshipping — and you need creatives that actually convert, this is built for you. We've worked across dozens of niches." },
-    { q: "How much does it cost?", a: "Packages start at $297 for 3 creatives. Growth is $597 for 8 creatives. Scale is $997 for 15 creatives. No retainers. No hidden fees. Pay once, get your creatives." },
   ];
 
   return (
@@ -514,8 +513,8 @@ function FinalCTA() {
     <section className="bg-[#0F172A] py-24 px-4 border-t border-[#F59E0B]/20">
       <div className="max-w-3xl mx-auto text-center">
         <h2 className="text-4xl md:text-5xl font-black text-[#F8FAFC] mb-6 leading-tight">
-          Stop Guessing.<br />
-          <span className="text-[#F59E0B]">Start Converting.</span>
+          Stop Guessing<br />
+          <span className="text-[#F59E0B]">Start Converting!</span>
         </h2>
         <p className="text-[#F8FAFC] text-lg mb-10 max-w-xl mx-auto">
           Your competitors are already running better creatives. The longer you wait, the more money you leave on the table.
