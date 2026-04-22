@@ -166,10 +166,10 @@ function WhatYouGet() {
             Your Income Is Low Because<br />Your Content Sucks.
           </h2>
           <p className="text-[#F8FAFC] text-lg mb-10 leading-relaxed max-w-2xl mx-auto">
-            Posting consistently is essential for success. We help your brand stay on schedule with standout content designed to keep you visible and top of mind, so you keep your audience engaged and your business growing.
+            We create content that gets you noticed—so you can focus on what matters most: growing your business.
           </p>
           <p className="text-[#F59E0B] text-xs font-black uppercase tracking-[0.2em] mb-4">How It Works</p>
-          <h3 className="text-xl font-black text-[#F8FAFC] mb-2">3 Steps</h3>
+          <h3 className="text-xl font-black text-[#F8FAFC] mb-2">3 Steps:</h3>
           <p className="text-[#F8FAFC] text-lg"></p>
         </div>
 
@@ -457,10 +457,10 @@ function Guarantee() {
       <div className="max-w-3xl mx-auto text-center">
         <Shield size={28} className="mx-auto mb-3 md:mb-4 text-black md:w-10 md:h-10" />
         <h2 className="text-xl md:text-4xl font-black text-black mb-2 md:mb-4">
-          Love It Or We Fix It. Period.
+          Your audience is waiting!
         </h2>
         <p className="text-black/85 text-sm md:text-lg max-w-xl mx-auto leading-relaxed">
-          Not happy with your creatives? We revise until you are. No arguments. No fine print. We stand behind our work because we know it converts.
+          Let’s make content that grabs attention and grows your business.
         </p>
       </div>
     </section>
