@@ -82,7 +82,7 @@ function Hero() {
         </div>
 
         <p className="text-[#F8FAFC] text-xl md:text-2xl mb-6 max-w-2xl mx-auto leading-relaxed font-medium">
-          It’s a repeatable marketing system built to help you stop relying on AI-generated content and start driving real revenue with better creatives.
+          Create a Marketing Engine That Runs Without You and replace inconsistent AI-generated content with creatives that actually drive revenue.
         </p>
 
         {/* Social icons */}
@@ -135,35 +135,6 @@ function StatsBar() {
   );
 }
 
-function Problem() {
-  return (
-    <section className="bg-[#111827] py-24 px-4">
-      <div className="max-w-3xl mx-auto text-center">
-        <p className="text-[#F59E0B] text-xs font-black uppercase tracking-[0.2em] mb-6">The Problem</p>
-        <h2 className="text-4xl md:text-5xl font-black text-[#F8FAFC] mb-8 leading-tight">
-          Your Income Is Low Because<br />Your Creative Sucks.
-        </h2>
-        <p className="text-[#F8FAFC] text-lg mb-14 leading-relaxed max-w-2xl mx-auto">
-          Posting Consistently is key for success. We help your brand show up on schedule with standout content, so you keep your audience engaged and your business growing.
-        </p>
-        <div className="hidden md:grid md:grid-cols-3 gap-4 text-left">
-          {[
-            { icon: '\u{1F4B8}', title: 'Burning Ad Spend', desc: 'Same tired formats everyone uses. No differentiation means no conversions.' },
-            { icon: '\u{1F916}', title: 'AI Slop Everywhere', desc: 'AI-generated content floods every feed. Consumers tune it out instantly.' },
-            { icon: '\u{23F3}', title: 'Slow Agencies', desc: 'Most agencies take weeks. You need test-ready creatives now, not next month.' },
-          ].map((item, i) => (
-            <div key={i} className="bg-[#1E293B] border border-[#334155] p-6">
-              <div className="text-3xl mb-4">{item.icon}</div>
-              <h3 className="text-[#F8FAFC] font-black text-base mb-2">{item.title}</h3>
-              <p className="text-[#F8FAFC] text-sm leading-relaxed">{item.desc}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
 function WhatYouGet() {
   const steps = [
     {
@@ -187,59 +158,79 @@ function WhatYouGet() {
   ];
 
   return (
-    <section id="how" className="bg-[#0F172A] py-24 px-4 border-t border-[#F59E0B]/20">
+    <section id="how" className="bg-[#111827] py-24 px-4 border-t border-[#F59E0B]/20">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-16">
-          <p className="text-[#F59E0B] text-xs font-black uppercase tracking-[0.2em] mb-6">How It Works</p>
-          <h2 className="text-4xl md:text-5xl font-black text-[#F8FAFC] mb-4">3 Steps.</h2>
-          <p className="text-[#F8FAFC] text-lg">No lengthy onboarding. No back-and-forth. Just results.</p>
+          <p className="text-[#F59E0B] text-xs font-black uppercase tracking-[0.2em] mb-6">The Problem & How We Fix It</p>
+          <h2 className="text-4xl md:text-5xl font-black text-[#F8FAFC] mb-4 leading-tight">
+            Your Income Is Low Because<br />Your Content Sucks.
+          </h2>
+          <p className="text-[#F8FAFC] text-lg mb-10 leading-relaxed max-w-2xl mx-auto">
+            Posting consistently is essential for success. We help your brand stay on schedule with standout content designed to keep you visible and top of mind, so you keep your audience engaged and your business growing.
+          </p>
+          <p className="text-[#F59E0B] text-xs font-black uppercase tracking-[0.2em] mb-4">How It Works</p>
+          <h3 className="text-xl font-black text-[#F8FAFC] mb-2">3 Steps</h3>
+          <p className="text-[#F8FAFC] text-lg"></p>
         </div>
 
         {/* Mobile version */}
-        <div className="md:hidden flex flex-col gap-4 mb-10">
+        <div className="md:hidden flex flex-col gap-3 mb-8 items-center">
           {steps.map((step, i) => (
-            <div key={i} className="flex items-start gap-4 border-l-2 border-[#F59E0B] pl-4">
-              <span className="text-[#F59E0B] font-black text-sm shrink-0">{step.num}</span>
+            <div key={i} className="flex items-center gap-3 border-l-2 border-[#F59E0B] pl-3 w-64">
+              <span className="text-[#F59E0B] font-black text-xs shrink-0">{step.num}</span>
               <div>
-                <h3 className="text-[#F8FAFC] font-black text-base">{step.title}</h3>
-                <p className="text-[#F8FAFC]/70 text-sm mt-0.5">{step.detail}</p>
+                <h3 className="text-[#F8FAFC] font-black text-sm">{step.title}</h3>
+                <p className="text-[#F8FAFC]/60 text-xs">{step.detail}</p>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Step cards */}
-        <div className="hidden md:grid md:grid-cols-3 gap-0 relative">
+        {/* Step cards - compact */}
+        <div className="hidden md:flex md:items-stretch gap-0 relative mb-4">
           {steps.map((step, i) => (
-            <div key={i} className="relative flex flex-col items-start p-8 border border-[#F59E0B]/20 bg-[#1E293B] group hover:border-[#F59E0B] transition-colors duration-300">
-              {/* Connector arrow between cards */}
+            <div key={i} className="relative flex flex-1 items-center gap-4 px-6 py-4 border border-[#F59E0B]/20 bg-[#1E293B] group hover:border-[#F59E0B] transition-colors duration-300">
               {i < steps.length - 1 && (
                 <div className="hidden md:flex absolute -right-4 top-1/2 -translate-y-1/2 z-10 w-8 h-8 items-center justify-center bg-[#1E293B] border border-[#F59E0B]/30 text-[#F59E0B] text-lg font-black">
                   →
                 </div>
               )}
-              {/* Step number */}
-              <div className="text-[5rem] font-black leading-none text-[#F59E0B]/40 group-hover:text-[#F59E0B] transition-colors select-none mb-4">
+              <div className="text-3xl font-black leading-none text-[#F59E0B]/40 group-hover:text-[#F59E0B] transition-colors select-none shrink-0">
                 {step.num}
               </div>
-              {/* Content */}
-              <h3 className="text-[#F8FAFC] text-xl font-black mb-3">{step.title}</h3>
-              <p className="text-[#F8FAFC] text-sm leading-relaxed mb-4">{step.desc}</p>
-              <div className="mt-auto flex items-center gap-2 text-[#F59E0B] text-xs font-black uppercase tracking-wider">
-                <Check size={12} /> {step.detail}
+              <div>
+                <h3 className="text-[#F8FAFC] text-sm font-black mb-0.5">{step.title}</h3>
+                <p className="text-[#F8FAFC]/70 text-xs leading-relaxed">{step.desc}</p>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Timeline bar */}
-        <div className="hidden md:flex items-center justify-between mt-0 border-x border-b border-[#F59E0B]/20 bg-[#F59E0B]/10 px-8 py-3">
-          {steps.map((step, i) => (
-              <div key={i} className="flex items-center gap-2 text-xs text-[#F8FAFC] font-bold uppercase tracking-widest">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#F59E0B]" />
-              Step {step.num}
-            </div>
-          ))}
+        {/* Video examples */}
+        <div className="mt-10 mb-10">
+          <p className="text-[#F59E0B] text-xs font-black uppercase tracking-[0.2em] mb-5 text-center">Creative Examples</p>
+          {/* Mobile: horizontal scroll */}
+          <div className="flex md:hidden gap-3 overflow-x-auto pb-2 -mx-4 px-4">
+            {[1, 2, 3, 4, 5].map((n) => (
+              <div key={n} className="shrink-0 w-28 aspect-[9/16] bg-[#1E293B] border border-[#334155] flex flex-col items-center justify-center gap-2 hover:border-[#F59E0B] transition-colors cursor-pointer">
+                <div className="w-8 h-8 bg-[#F59E0B]/10 border border-[#F59E0B]/30 flex items-center justify-center">
+                  <Play size={14} fill="currentColor" className="text-[#F59E0B] ml-0.5" />
+                </div>
+                <span className="text-[#F8FAFC]/40 text-[10px] uppercase tracking-widest">Ex. {n}</span>
+              </div>
+            ))}
+          </div>
+          {/* Desktop: 5-column grid */}
+          <div className="hidden md:grid md:grid-cols-5 gap-3">
+            {[1, 2, 3, 4, 5].map((n) => (
+              <div key={n} className="aspect-[9/16] bg-[#1E293B] border border-[#334155] flex flex-col items-center justify-center gap-2 group hover:border-[#F59E0B] transition-colors cursor-pointer">
+                <div className="w-10 h-10 bg-[#F59E0B]/10 border border-[#F59E0B]/30 flex items-center justify-center group-hover:bg-[#F59E0B]/20 transition-colors">
+                  <Play size={16} fill="currentColor" className="text-[#F59E0B] ml-0.5" />
+                </div>
+                <span className="text-[#F8FAFC]/40 text-[10px] uppercase tracking-widest">Example {n}</span>
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="text-center mt-14">
@@ -371,7 +362,7 @@ function Pricing() {
         </div>
 
         {/* Package Selector */}
-        <div className="grid md:grid-cols-3 gap-3 mb-10">
+        <div className="flex flex-col md:grid md:grid-cols-3 gap-3 mb-10">
           {packages.map((pkg) => (
             <button
               key={pkg.id}
@@ -389,7 +380,7 @@ function Pricing() {
               )}
               <div className="flex items-center justify-between mb-2">
                 <h3 className="text-[#F8FAFC] font-black text-base">{pkg.name}</h3>
-                <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center ${
+                <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center shrink-0 ${
                   selectedPackage === pkg.id ? 'border-[#F59E0B]' : 'border-[#475569]'
                 }`}>
                   {selectedPackage === pkg.id && <div className="w-2.5 h-2.5 rounded-full bg-[#F59E0B]" />}
@@ -545,7 +536,7 @@ function Footer() {
           <div>
             <span className="text-xl font-black tracking-wide text-[#F8FAFC] mb-4 block">HumanMadeAds.xyz</span>
             <p className="text-[#F8FAFC] text-sm max-w-xs leading-relaxed">
-              Hand-crafted video creatives that actually convert. No AI. No excuses.
+              Hand-crafted E-commerece video creatives that actually convert. No AI. No excuses.
             </p>
           </div>
           <div className="flex gap-12">
@@ -594,7 +585,6 @@ export default function App() {
       <main>
         <Hero />
         <StatsBar />
-        <Problem />
         <WhatYouGet />
         <Pricing />
         <Guarantee />
