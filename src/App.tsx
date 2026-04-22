@@ -82,7 +82,7 @@ function Hero() {
         </div>
 
         <p className="text-[#F8FAFC] text-xl md:text-2xl mb-6 max-w-2xl mx-auto leading-relaxed font-medium">
-          It’s a repeatable marketing system built to help you stop relying on AI-generated content and start driving real revenue.
+          It’s a repeatable marketing system built to help you stop relying on AI-generated content and start driving real revenue with better creatives.
         </p>
 
         {/* Social icons */}
@@ -103,7 +103,7 @@ function Hero() {
         </a>
 
         <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-[#F8FAFC] mt-12 font-medium">
-          {['Fast Delivery', 'Human-Edited Only', 'Fast Replies', '500+ Ads Delivered'].map((t, i) => (
+          {['Fast Delivery', 'Human-Edited Only', 'Fast Replies', '500+ Creatives Delivered'].map((t, i) => (
             <span key={i} className="flex items-center gap-2">
               <Check size={14} className="text-[#F59E0B]" /> {t}
             </span>
@@ -117,7 +117,7 @@ function Hero() {
 function StatsBar() {
   const stats = [
     { value: '$1M+', label: 'Revenue Generated For Clients' },
-    { value: '500+', label: 'Ads Delivered' },
+    { value: '500+', label: 'Creatives Delivered' },
        { value: '72 Hours', label: 'Fast Delivery' },
     { value: '4.8/5', label: 'Client Rating' },
   ];
@@ -141,13 +141,12 @@ function Problem() {
       <div className="max-w-3xl mx-auto text-center">
         <p className="text-[#F59E0B] text-xs font-black uppercase tracking-[0.2em] mb-6">The Problem</p>
         <h2 className="text-4xl md:text-5xl font-black text-[#F8FAFC] mb-8 leading-tight">
-          Your Ads Are Failing Because<br />Your Creative Sucks.
+          Your Income Is Low Because<br />Your Creative Sucks.
         </h2>
         <p className="text-[#F8FAFC] text-lg mb-14 leading-relaxed max-w-2xl mx-auto">
-          You&apos;re spending money on ads, testing audiences, tweaking budgets — but the real bottleneck?{' '}
-          <span className="text-[#F8FAFC] font-bold">The creative.</span> Generic AI content doesn&apos;t stop the scroll. Human-made content does!
+          Posting Consistently is key for success. We help your brand show up on schedule with standout content, so you keep your audience engaged and your business growing.
         </p>
-        <div className="grid md:grid-cols-3 gap-4 text-left">
+        <div className="hidden md:grid md:grid-cols-3 gap-4 text-left">
           {[
             { icon: '\u{1F4B8}', title: 'Burning Ad Spend', desc: 'Same tired formats everyone uses. No differentiation means no conversions.' },
             { icon: '\u{1F916}', title: 'AI Slop Everywhere', desc: 'AI-generated content floods every feed. Consumers tune it out instantly.' },
@@ -181,8 +180,8 @@ function WhatYouGet() {
     },
     {
       num: '03',
-      title: 'Get Launch-Ready Ads',
-      desc: 'Receive polished, human-edited video ads. Ready to deploy and start converting immediately.',
+      title: 'Get Launch-Ready Creatives',
+      desc: 'Receive polished, human-edited video creatives. Ready to deploy and start converting immediately.',
       detail: 'Delivered fast. Revisions included.',
     },
   ];
@@ -196,8 +195,21 @@ function WhatYouGet() {
           <p className="text-[#F8FAFC] text-lg">No lengthy onboarding. No back-and-forth. Just results.</p>
         </div>
 
+        {/* Mobile version */}
+        <div className="md:hidden flex flex-col gap-4 mb-10">
+          {steps.map((step, i) => (
+            <div key={i} className="flex items-start gap-4 border-l-2 border-[#F59E0B] pl-4">
+              <span className="text-[#F59E0B] font-black text-sm shrink-0">{step.num}</span>
+              <div>
+                <h3 className="text-[#F8FAFC] font-black text-base">{step.title}</h3>
+                <p className="text-[#F8FAFC]/70 text-sm mt-0.5">{step.detail}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
         {/* Step cards */}
-        <div className="grid md:grid-cols-3 gap-0 relative">
+        <div className="hidden md:grid md:grid-cols-3 gap-0 relative">
           {steps.map((step, i) => (
             <div key={i} className="relative flex flex-col items-start p-8 border border-[#F59E0B]/20 bg-[#1E293B] group hover:border-[#F59E0B] transition-colors duration-300">
               {/* Connector arrow between cards */}
@@ -339,9 +351,9 @@ function Pricing() {
   const [selectedPackage, setSelectedPackage] = useState('growth');
 
   const packages = [
-    { id: 'starter', name: 'Starter', price: '$297', desc: '3 Video Ads · 1 Platform · Fast Delivery' },
-    { id: 'growth', name: 'Growth', price: '$597', desc: '5 Video Ads · 2 Platforms · Hook Variations' },
-    { id: 'scale', name: 'Scale', price: '$997', desc: '10 Video Ads · All Platforms · Dedicated Editor' },
+    { id: 'starter', name: 'Starter', price: '$297', desc: '3 Video Creatives · 1 Platform · Fast Delivery' },
+    { id: 'growth', name: 'Growth', price: '$597', desc: '5 Video Creatives · 2 Platforms · Hook Variations' },
+    { id: 'scale', name: 'Scale', price: '$997', desc: '10 Video Creatives · All Platforms · Dedicated Editor' },
   ];
 
   const whatsappNumber = '1234567890';
@@ -398,7 +410,7 @@ function Pricing() {
             </div>
             <h3 className="text-[#F8FAFC] font-black text-xl mb-2">Book A Free Call</h3>
             <p className="text-[#F8FAFC] text-sm mb-6 leading-relaxed">
-              Schedule a free 15-min strategy call. We&apos;ll review your current ads and show you exactly how we can help.
+              Schedule a free 15-min strategy call. We&apos;ll review your current creatives and show you exactly how we can help.
             </p>
             <a
               href="https://calendly.com/YOUR_LINK"
@@ -457,7 +469,7 @@ function Guarantee() {
           Love It Or We Fix It. Period.
         </h2>
         <p className="text-black/85 text-lg max-w-xl mx-auto leading-relaxed">
-          Not happy with your ads? We revise until you are. No arguments. No fine print. We stand behind our work because we know it converts.
+          Not happy with your creatives? We revise until you are. No arguments. No fine print. We stand behind our work because we know it converts.
         </p>
       </div>
     </section>
@@ -468,12 +480,12 @@ function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const faqs = [
-    { q: "What actually happens after I order?", a: "You pick your package, fill out a short brief (product link, offer, angles), and we get to work. You'll receive your finished ads, platform-optimized, ready to launch." },
-    { q: "How is this different from hiring a freelancer?", a: "Freelancers take weeks, miss deadlines, and produce inconsistent quality. We have a systemized process that delivers polished, platform-optimized ads — every single time." },
+    { q: "What actually happens after I order?", a: "You pick your package, fill out a short brief (product link, offer, angles), and we get to work. You'll receive your finished creatives, platform-optimized, ready to launch." },
+    { q: "How is this different from hiring a freelancer?", a: "Freelancers take weeks, miss deadlines, and produce inconsistent quality. We have a systemized process that delivers polished, platform-optimized creatives — every single time." },
     { q: "Will these actually convert?", a: "That's the only thing that matters to us. Every ad is built using proven direct-response frameworks. We study what's working right now on Meta and TikTok and apply it to your product." },
     { q: "What's the revision policy?", a: "Starter gets 1 round. Growth gets 2. Scale gets unlimited. We don't stop until you're satisfied." },
-    { q: "Is this right for my business?", a: "If you're selling a physical product online — e-commerce, DTC, dropshipping — and you need ads that actually convert, this is built for you. We've worked across dozens of niches." },
-    { q: "How much does it cost?", a: "Packages start at $297 for 3 ads. Growth is $597 for 8 ads. Scale is $997 for 15 ads. No retainers. No hidden fees. Pay once, get your ads." },
+    { q: "Is this right for my business?", a: "If you're selling a physical product online — e-commerce, DTC, dropshipping — and you need creatives that actually convert, this is built for you. We've worked across dozens of niches." },
+    { q: "How much does it cost?", a: "Packages start at $297 for 3 creatives. Growth is $597 for 8 creatives. Scale is $997 for 15 creatives. No retainers. No hidden fees. Pay once, get your creatives." },
   ];
 
   return (
@@ -515,7 +527,7 @@ function FinalCTA() {
           <span className="text-[#F59E0B]">Start Converting.</span>
         </h2>
         <p className="text-[#F8FAFC] text-lg mb-10 max-w-xl mx-auto">
-          Your competitors are already running better ads. The longer you wait, the more money you leave on the table.
+          Your competitors are already running better creatives. The longer you wait, the more money you leave on the table.
         </p>
         <a href="#pricing" className="bg-[#F59E0B] text-black px-14 py-5 text-lg font-black uppercase tracking-wide hover:bg-[#F59E0B]/80 transition-colors inline-block">
           BOOK A FREE CALL
@@ -533,7 +545,7 @@ function Footer() {
           <div>
             <span className="text-xl font-black tracking-wide text-[#F8FAFC] mb-4 block">HumanMadeAds.xyz</span>
             <p className="text-[#F8FAFC] text-sm max-w-xs leading-relaxed">
-              Hand-crafted e-commerce video ads that actually convert. No AI. No excuses.
+              Hand-crafted video creatives that actually convert. No AI. No excuses.
             </p>
           </div>
           <div className="flex gap-12">
