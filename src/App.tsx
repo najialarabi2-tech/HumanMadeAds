@@ -122,12 +122,12 @@ function StatsBar() {
     { value: '4.8/5', label: 'Client Rating' },
   ];
   return (
-    <section className="bg-[#F59E0B] py-10 px-4">
-      <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+    <section className="bg-[#F59E0B] py-6 md:py-10 px-4">
+      <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 text-center">
         {stats.map((s, i) => (
           <div key={i}>
-            <div className="text-3xl md:text-4xl font-black text-black">{s.value}</div>
-            <div className="text-black/80 text-xs font-bold uppercase tracking-widest mt-1">{s.label}</div>
+            <div className="text-xl md:text-4xl font-black text-black">{s.value}</div>
+            <div className="text-black/80 text-[10px] md:text-xs font-bold uppercase tracking-widest mt-0.5">{s.label}</div>
           </div>
         ))}
       </div>
@@ -453,13 +453,13 @@ function Pricing() {
 
 function Guarantee() {
   return (
-    <section className="bg-[#F59E0B] py-16 px-4">
+    <section className="bg-[#F59E0B] py-8 md:py-16 px-4">
       <div className="max-w-3xl mx-auto text-center">
-        <Shield size={40} className="mx-auto mb-4 text-black" />
-        <h2 className="text-3xl md:text-4xl font-black text-black mb-4">
+        <Shield size={28} className="mx-auto mb-3 md:mb-4 text-black md:w-10 md:h-10" />
+        <h2 className="text-xl md:text-4xl font-black text-black mb-2 md:mb-4">
           Love It Or We Fix It. Period.
         </h2>
-        <p className="text-black/85 text-lg max-w-xl mx-auto leading-relaxed">
+        <p className="text-black/85 text-sm md:text-lg max-w-xl mx-auto leading-relaxed">
           Not happy with your creatives? We revise until you are. No arguments. No fine print. We stand behind our work because we know it converts.
         </p>
       </div>
